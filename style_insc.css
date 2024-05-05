@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+header{
+    background-color: #7FBBC9;
+    display: flex;
+    justify-content: center;
+    padding: 2.55rem;
+    margin-bottom: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #023b63;
+}
+
+body{
+    background-color: #0087A0;
+}
+
+h2 {
+    color: #336182;
+}
+
+section {
+    float: right;
+    background-color: #DDCCBB;
+    color: #7D7E80;
+    padding: 30px;
+    margin: 187px;
+    border-radius: 10px;
+    width: 400px;
+    height: 370px;
+    margin-top: 13%;
+    margin-bottom: 50%;
+    text-align: justify;
+}
+
+.introducao {
+    float: left;
+}
+   
+.navigationbar {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 10;
+    padding: 15;
+    gap: 70px ;
+}
+
+.logo {
+    position: absolute; /* remove the logo from the flow */
+    left: 20px;   /* move the logo to left */
+    top: 0;
+    height: 100px;
+    width: 100px;
+  
+}
+
+
+footer {
+	background-color: #7FBBC9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    
+}
+
+.ulfooter {
+	display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 10;
+    padding: 15;
+    gap: 70px ;
+}
+
+.lifooter {
+	display: inline-block;
+	margin: 0 px;
+}
+
+.pfooter{
+    color: #7D7E80;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    margin-bottom: 10px; /* Espaço após o rótulo */
+  }
+  
+  input {
+    margin-top: 10px; /* Espaço antes do campo de entrada */
+  }
+
+div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #023b63; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .helper-text {
+    display: none;
+    font-size: .8rem;
+    color: darkred;
+  }
+  
+  .required-popup::after {
+    content: "*Campo obrigatório";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #DFDFDF;
+    font-size: .65rem;
+    padding: .2rem .3rem;
+    width: auto;
+    display: block;
+    background-color: #202020;
+  }
+  
+  input.error {
+    border: solid 2px #992020;
+    background-color: #CCBBBB;
+    color: #662020;
+  }
+  
+  input.correct {
+    background-color: #BBCCBB;
+    border: solid 2px #206620;
+    color: #206620;
+  }
+  
+  .visible {
+    display: block;
+  }

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viver Bem</title>
+    <link rel="stylesheet" href="./style_insc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./img/logotype.jpg" alt="Imagem azul do logo" class = "logo">
+        </div>
+            <nav>
+                <ul class="navigationbar">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="/tela1.html">Alimentação</a></li>
+                    <li><a href="/inscrevase.html">Inscreva-se</a></li>
+                    <li><a href="#">Exercícios</a></li>
+                    <li><a href="#">Profissionais</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+      <section class="introducao">
+        <div>
+          <p><a href="/profissionais.html">Aqui</a></li> você encontrará uma lista de profissionais que oferecem serviços a preços sociais, 
+            tornando o acesso a cuidados e serviços mais acessível para todos. Se você é um profissional que deseja se inscrever 
+            para oferecer serviços com valores reduzidos, preencha nosso formulário de cadastro para começar. Se você procura por 
+            esses serviços a preços sociais, inscreva-se para ser notificado sempre que novos profissionais estiverem disponíveis 
+            na sua cidade. Com nosso site, você pode conectar-se facilmente com profissionais locais dispostos a oferecer seus 
+            serviços por valores acessíveis, proporcionando uma comunidade mais inclusiva e solidária. Cadastre-se agora e junte-se 
+            a nós para tornar a assistência e os serviços mais acessíveis a todos.</p>
+        </div>
+      </section>
+      <section>
+        <h2>Cadastro</h2>
+        <!-- Seção para escolher o tipo de cadastro -->
+        <div>
+            <label>
+                <input type="radio" name="tipo_cadastro" value="pf" onclick="toggleForm('pf')"> Usuário
+            </label>
+            <label>
+                <input type="radio" name="tipo_cadastro" value="pj" onclick="toggleForm('pj')"> Profissional
+            </label>
+        </div>
+    
+        <!-- Formulário para Pessoa Física -->
+        <form id="form_pf" action="/submit_pf" method="post" style="display: none;">
+            <div>
+                <label for="nomepf" >Nome:</label>
+                <input type="text" id="nomepf" name="nomepf" required>
+                <p id="nome-helperpf" class="helper-text ">Mensagem de ajuda</p>
+            </div>
+            <div>
+                <label for="emailpf">E-mail:</label>
+                <input type="text" id="emailpf" name="emailpf" required>
+                <p id="email-helperpf" class="helper-text ">Mensagem de ajuda</p>
+            </div>
+            <div>
+              <label for="telefonepf">Telefone:</label>
+              <input type="text" id="telefonepf" name="telefonepf" required>
+              <p id="telefone-helperpf" class="helper-text ">Mensagem de ajuda</p>
+          </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    
+        <!-- Formulário para Pessoa Jurídica -->
+        <form id="form_pj" action="/submit_pj" method="post" style="display: none;">
+            <div>
+                  <label for="nome" >Nome:</label>
+                  <input type="text" id="nome" name="nome" required>
+                  <p id="nome-helper" class="helper-text ">Mensagem de ajuda</p>
+            </div>
+            <div>
+                  <label for="email">E-mail:</label>
+                  <input type="text" id="email" name="email" required>
+                  <p id="email-helper" class="helper-text ">Mensagem de ajuda</p>
+            </div>
+            <div>
+                <label for="telefone">Telefone: </label>
+                <input type="text" id="telefone" name="telefone" required>
+                <p id="telefone-helper" class="helper-text ">Mensagem de ajuda</p>
+            </div>
+            <div>
+              <label for="cargo">Especialidade:</label>
+              <select id="cargo" name="cargo">
+                  <option value="Acupuntura">Acupuntura</option>
+                  <option value="Alergologia">Alergologia</option>
+                  <option value="Cardiologia">Cardiologia</option>
+                  <option value="Clínica Geral">Clínica Geral</option>
+                  <option value="Dermatologia">Dermatologia</option>
+                  <option value="Endocrinologia">Endocrinologia</option>
+                  <option value="Fisioterapia">Fisioterapia</option>
+                  <option value="Fonoaudiologia">Fonoaudiologia</option>
+                  <option value="Geriatria">Geriatria</option>
+                  <option value="Ginecologia">Ginecologia</option>
+                  <option value="Hematologia">Hematologia</option>
+                  <option value="Neurologia">Neurologia</option>
+                  <option value="Nutrição">Nutrição</option>
+                  <option value="Nutrologia">Nutrologia</option>
+                  <option value="Obstetrícia">Obstetrícia</option>
+                  <option value="Oftalmologia">Oftalmologia</option>
+                  <option value="Oncologia">Oncologia</option>
+                  <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+                  <option value="Ortopedia">Ortopedia</option>
+                  <option value="Psicologia">Psicologia</option>
+                  <option value="Psiquiatria">Psiquiatria</option>
+                  <option value="Reumatologia">Reumatologia</option>
+                  <option value="Terapia Ocupacional">Terapia Ocupacional</option>
+              </select>
+          </div>
+            <div>
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div>
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" required>
+                <p id="cnpj-helper" class="helper-text ">Mensagem de ajuda</p>
+            </div>
+            <div>
+              <label for="registro">Conselho/Registro:</label>
+              <input type="text" id="registro" name="registro" required>
+          </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+        <p class="pfooter">Nos siga nas redes sociais</p>
+        <nav>
+            <ul class="ulfooter">
+                <li class="lifooter"><a href="#">Instagram</a></li>
+                <li class="lifooter"><a href="#">Twitter</a></li>
+                <li class="lifooter"><a href="#">Facebook</a></li>
+                <li class="lifooter"><a href="#">Youtube</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
