@@ -7,7 +7,7 @@ header{
     background-color: #7FBBC9;
     display: flex;
     justify-content: center;
-    padding: 2.55rem;
+    padding: 2.1rem;
     margin-bottom: 15px;
     position: fixed;
     width: 100%;
@@ -19,13 +19,10 @@ body{
     background-color: #0087A0;
 }
 
-/* section{
-    display: flex;
-    margin-top: 15px;
-    align-items: normal;
-} */
+p{
+    color: #7D7E80;
+}
 
-   
 .navigationbar {
     display: flex;
     justify-content: center;
@@ -44,83 +41,38 @@ body{
   
 }
 
-.intro {
-    display: flex;
-    flex-direction: column; /* Alinha elementos verticalmente */
-    align-items: flex-start;
-    flex: 1;
+
+.tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
 }
 
-.conteudo {
-    display: grid; /* Usando CSS Grid */
-    justify-items: start;
-    margin-left: 0;
-    margin-top: 10%;
-    flex: 1;
-}
-
-.lista{
-    list-style-type: circle;
-}
 .container {
     width: 100%;
     background-color: #DDCCBB;
     padding: 20px;
     margin: 8px;
     border-radius: 10px;
-    width: 300px;
-    height: 150px;
-    float: left;
-    margin-top: 19%;
-}
-
-h2{
-    color: #336182;
-}
-
-h4{
-    color: #0087A0;
-    margin-bottom: 15px;
-    padding-left: 20px; 
-
-}
-
-p{
-    color: #7D7E80;
-}
-
-.imagem {
-    display: flex;
-    justify-content: center;
-    height: 800px;
-}
-
-.pratoimg {
-    width: 100%;
+    width: 1000px;
     height: 500px;
-    top: 50%;
-    left: 50%;
-}
-
-.lista{
-    color: #7D7E80;
+    float: center;
+    margin-top: 7%;
+    margin-left: 19%;
     
 }
 
-.comidas{
-    background-color: #DDCCBB;
-    margin: 40px;
-    border-radius: 4px;
-    padding: 18px;
-    width: 150px;
-    height: 330px;
+.table td, .table th {
+    color: #7D7E80;
+
 }
 
-.intro, .conteudo {
-    float: left;
-    width: 40%;
-    height: 200px;
-    flex: 1;
+.pagination .page-item {
+    margin: 0 5px; /* Espaçamento horizontal entre os itens */
+}
+.pagination .page-link {
+    padding: 10px 15px; /* Ajuste de padding dos links */
 }
 
 footer {
@@ -128,7 +80,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     
 }
 
