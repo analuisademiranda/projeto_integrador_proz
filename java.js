@@ -22,6 +22,17 @@ let cnpjInput = document.getElementById("cnpj");
 let cnpjLabel = document.querySelector('label[for="cnpj"]');
 let cnpjHelper = document.getElementById("cnpj-helper");
 
+// ---------- pegando elementos endereço ---------- //
+let enderecoInput = document.getElementById("endereco");
+let enderecoLabel = document.querySelector('label[for="endereco"]');
+let enderecoHelper = document.getElementById("endereco-helper");
+
+// ---------- pegando elementos registro ---------- //
+let registroInput = document.getElementById("registro");
+let registroLabel = document.querySelector('label[for="registro"]');
+let registroHelper = document.getElementById("registro-helper");
+
+
 //---------- pegando elementos email ----------//
 let emailLabel = document.querySelector('label[for="email"]');
 console.log(emailLabel);
@@ -151,6 +162,42 @@ cnpjInput.addEventListener("input",function(e) {
         cnpjInput.classList.remove("error")
         cnpjInput.classList.add("correct")
         cnpjHelper.classList.remove("visible")
+    }
+});
+
+//---------- registro ----------//
+registroInput.addEventListener("input",function(e) {
+    let valor = e.target.value;
+    console.log(valor);
+
+    //adicionar a condição
+    if(isNaN(valor) == true){
+        registroInput.classList.add("error")
+        registroHelper.classList.add("visible")
+        registroHelper.innerText = "Apenas números"
+        registroInput.classList.remove("correct")
+    }else{
+        registroInput.classList.remove("error")
+        registroInput.classList.add("correct")
+        registroHelper.classList.remove("visible")
+    }
+});
+
+//---------- endereco ----------//
+enderecoInput.addEventListener("input",function(e) {
+    let valor = e.target.value;
+    console.log(valor);
+
+    //adicionar a condição
+    if(valor.length < 4 && isNaN(valor) == false){
+        enderecoInput.classList.add("error")
+        enderecoHelper.classList.add("visible")
+        enderecoHelper.innerText = "Insira um endereço válido"
+        enderecoInput.classList.remove("correct")
+    }else{
+        enderecoInput.classList.remove("error")
+        enderecoInput.classList.add("correct")
+        enderecoHelper.classList.remove("visible")
     }
 });
 
